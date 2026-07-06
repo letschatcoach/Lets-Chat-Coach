@@ -1,0 +1,5 @@
+{
+  "name": "lets-chat-coach",
+  "description": "Professional coaching from the Let's Chat Coach engine. Adds a /coach slash command and connects the Let's Chat Coach MCP server (Engine mode — coaching runs on the Let's Chat Coach backend and is relayed into the conversation).",
+  "version": "0.1.0"
+}
