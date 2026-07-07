@@ -2,8 +2,8 @@
 
 Professional coaching from the **Let's Chat Coach** engine, delivered inside Claude. Installing this plugin adds:
 
-- a **`/coach`** slash command to start a coaching session, and
-- the **Let's Chat Coach connector** (our coaching engine — you sign in once when you install).
+- a **`/coach`** skill to start a coaching session, and
+- the **Let's Chat Coach connector** (our coaching engine).
 
 Coaching runs on the Let's Chat Coach engine and is relayed into your conversation, so it applies your own methodology, history, and memory across sessions.
 
@@ -15,13 +15,22 @@ Coaching runs on the Let's Chat Coach engine and is relayed into your conversati
 
 1. In Claude, open **Customize** (left sidebar) → **Plugins**.
 2. Add a marketplace pointing at this repository: `cyclistep/Lets-Chat-Coach`.
-3. Install the **lets-chat-coach** plugin and approve the sign-in when prompted.
+3. Install the **lets-chat-coach** plugin.
 
 **Option B — upload the package:**
 
 1. Download the plugin package (the `lets-chat-coach` folder, or a zip of it).
 2. In Claude, open **Customize** → **Plugins** → upload a custom plugin, and select it.
-3. Approve the sign-in when prompted.
+
+### Step 2 — connect the Let's Chat Coach connector (required)
+
+Installing the plugin does **not** automatically sign you in. Before your first session:
+
+1. Open **Settings → Connectors** and look for **Let's Chat Coach** — click **Connect** and sign in with your [letschatcoach.com](https://letschatcoach.com) account.
+2. If it isn't listed there, click **Add custom connector**, paste `https://letschatcoach.com/api/mcp`, then connect and sign in.
+3. Start a **new conversation** — Claude loads a connector's tools per conversation, so an existing chat won't see them.
+
+Don't have a Let's Chat Coach account yet? Sign up at [letschatcoach.com](https://letschatcoach.com) first.
 
 ## Use
 
@@ -48,7 +57,13 @@ Then just talk. Every reply comes from the Let's Chat Coach engine.
 lets-chat-coach/
 ├── .claude-plugin/plugin.json      # plugin manifest
 ├── .mcp.json                       # connects the Let's Chat Coach engine (letschatcoach.com/api/mcp)
-└── commands/coach.md               # the /coach command
+└── skills/coach/SKILL.md           # the /coach skill
 ```
+
+## Troubleshooting
+
+- **`/coach` runs the wrong thing or says the skill doesn't exist:** make sure the connector is connected (Step 2 above), then start a new conversation. If you have other skills with similar names, use the namespaced form: `/lets-chat-coach:coach`.
+- **No sign-in prompt ever appeared:** connect via **Settings → Connectors** (Step 2) — the sign-in happens there, not during plugin install.
+- **"Access denied" from the coach:** your Let's Chat Coach trial or subscription may be inactive — check your plan at [letschatcoach.com](https://letschatcoach.com).
 
 Learn more: [letschatcoach.com](https://letschatcoach.com)

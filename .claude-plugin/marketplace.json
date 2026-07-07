@@ -8,8 +8,8 @@
     {
       "name": "lets-chat-coach",
       "source": "./lets-chat-coach",
-      "description": "Professional coaching from the Let's Chat Coach engine — leadership, career, and tough-conversation coaching that remembers you across sessions. Adds a /coach command and connects the Let's Chat Coach server.",
-      "version": "0.1.0",
+      "description": "Professional coaching from the Let's Chat Coach engine — leadership, career, and tough-conversation coaching that remembers you across sessions. Adds a /coach skill and connects the Let's Chat Coach server.",
+      "version": "0.2.0",
       "author": {
         "name": "Let's Chat Coach"
       }
