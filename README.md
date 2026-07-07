@@ -22,12 +22,12 @@ Coaching runs on the Let's Chat Coach engine and is relayed into your conversati
 1. Download the plugin package (the `lets-chat-coach` folder, or a zip of it).
 2. In Claude, open **Customize** → **Plugins** → upload a custom plugin, and select it.
 
-### Step 2 — connect the Let's Chat Coach connector (required)
+### Step 2 — install the Let's Chat Coach connector (required, one time)
 
-Installing the plugin does **not** automatically sign you in. Before your first session:
+Installing the plugin does **not** automatically connect or sign you in — Claude requires you to approve any connector yourself. Before your first session:
 
-1. Open **Settings → Connectors** and look for **Let's Chat Coach** — click **Connect** and sign in with your [letschatcoach.com](https://letschatcoach.com) account.
-2. If it isn't listed there, click **Add custom connector**, paste `https://letschatcoach.com/api/mcp`, then connect and sign in.
+1. Open the plugin's page: **Customize → Plugins → Lets Chat Coach**, switch to the **Connectors** tab, and press **Install** next to the Let's Chat Coach connector. Sign in with your [letschatcoach.com](https://letschatcoach.com) account when prompted.
+2. Alternatively (or if you don't see the Connectors tab): go to **Settings → Connectors**, connect **Let's Chat Coach** if listed, or click **Add custom connector** and paste `https://letschatcoach.com/api/mcp`, then sign in.
 3. Start a **new conversation** — Claude loads a connector's tools per conversation, so an existing chat won't see them.
 
 Don't have a Let's Chat Coach account yet? Sign up at [letschatcoach.com](https://letschatcoach.com) first.

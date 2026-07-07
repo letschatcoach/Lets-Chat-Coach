@@ -9,7 +9,7 @@
       "name": "lets-chat-coach",
       "source": "./lets-chat-coach",
       "description": "Professional coaching from the Let's Chat Coach engine — leadership, career, and tough-conversation coaching that remembers you across sessions. Adds a /coach skill and connects the Let's Chat Coach server.",
-      "version": "0.2.0",
+      "version": "0.2.1",
       "author": {
         "name": "Let's Chat Coach"
       }
