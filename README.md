@@ -2,8 +2,22 @@
 
 Professional coaching from the **Let's Chat Coach** engine, delivered inside Claude. Installing this plugin adds:
 
-- a **`/coach`** skill to start a coaching session, and
+- a **`/coach`** skill to start a coaching session,
+- the **"Manage My…" shortcuts** — one per relationship you manage, and
 - the **Let's Chat Coach connector** (our coaching engine).
+
+### Shortcuts
+
+| Shortcut | Focus |
+| --- | --- |
+| `/coach` | General coaching — leadership, career, goals, tough conversations. |
+| `/manageme` | Manage yourself — self-leadership, focus, resilience, growth. |
+| `/manageteam` | Manage your team — delegation, feedback, performance, team dynamics. |
+| `/manageboss` | Manage your boss — managing upward, alignment, trust. |
+| `/managestakeholders` | Manage your stakeholders — influence, alignment without authority. |
+| `/managework` | Manage your work — prioritization, planning, boundaries. |
+
+Every shortcut runs through the same Let's Chat Coach engine and connector. The `/manageme` shortcut and `/coach` are live today. Some of the other **Manage My…** shortcuts may route to products that aren't live on your account yet — when that happens the shortcut tells you it isn't active, shows what you do have access to, and stops, rather than improvising coaching. As those products go live, the shortcuts light up automatically — no plugin update or reinstall needed.
 
 Coaching runs on the Let's Chat Coach engine and is relayed into your conversation, so it applies your own methodology, history, and memory across sessions.
 
@@ -14,7 +28,7 @@ Coaching runs on the Let's Chat Coach engine and is relayed into your conversati
 **Option A — from this repo (recommended, auto-updates):**
 
 1. In Claude, open **Customize** (left sidebar) → **Plugins**.
-2. Add a marketplace pointing at this repository: `cyclistep/Lets-Chat-Coach`.
+2. Add a marketplace pointing at this repository: `https://github.com/letschatcoach/Lets-Chat-Coach`.
 3. Install the **lets-chat-coach** plugin.
 
 **Option B — upload the package:**
@@ -57,7 +71,13 @@ Then just talk. Every reply comes from the Let's Chat Coach engine.
 lets-chat-coach/
 ├── .claude-plugin/plugin.json      # plugin manifest
 ├── .mcp.json                       # connects the Let's Chat Coach engine (letschatcoach.com/api/mcp)
-└── skills/coach/SKILL.md           # the /coach skill
+└── skills/
+    ├── coach/SKILL.md              # the /coach skill
+    ├── manageme/SKILL.md           # the /manageme shortcut
+    ├── manageteam/SKILL.md         # the /manageteam shortcut
+    ├── manageboss/SKILL.md         # the /manageboss shortcut
+    ├── managestakeholders/SKILL.md # the /managestakeholders shortcut
+    └── managework/SKILL.md         # the /managework shortcut
 ```
 
 ## Troubleshooting
